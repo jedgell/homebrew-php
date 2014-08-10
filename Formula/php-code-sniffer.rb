@@ -16,7 +16,7 @@ class PhpCodeSniffer < Formula
   def phpcs_standards
     etc+name+'Standards'
   end
-  
+
   def phpcs_script_name
     'phpcs'
   end
@@ -27,7 +27,6 @@ class PhpCodeSniffer < Formula
 
   def install
     prefix.install Dir["PHP_CodeSniffer-#{version}/*"]
-    
     if File.symlink? libexec+phpcs_script_name
       File.delete libexec+phpcs_script_name
     end
